@@ -6,6 +6,10 @@ data:
       repos:
       - SettingRhino/jenkinsxTest
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - SettingRhino/jxreact
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -19,6 +23,9 @@ data:
       SettingRhino/jenkinsxTest:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
+      SettingRhino/jxreact:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
     heart: {}
     label:
       additional_labels: null
@@ -26,6 +33,22 @@ data:
     plugins:
       SettingRhino/jenkinsxTest:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      SettingRhino/jxreact:
       - approve
       - assign
       - blunderbuss
@@ -53,6 +76,11 @@ data:
     - repos:
       - SettingRhino/jenkinsxTest
       trusted_org: todo
+    - repos:
+      - SettingRhino/jxreact
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

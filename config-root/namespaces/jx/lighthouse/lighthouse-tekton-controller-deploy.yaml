@@ -20,7 +20,7 @@ spec:
     metadata:
       labels:
         app: lighthouse-tekton-controller
-      annotations: {jenkins-x.io/hash: '775bd4411d49adfec9360097b96e779cc3b5a12ca8f20dec6f11bb661b1af1a9'}
+      annotations: {jenkins-x.io/hash: 'c82dbe32c8a3e4d6e482b1ec7c1328fd7105bfc88b400e33fd4ed7a4a6800046'}
     spec:
       serviceAccountName: lighthouse-tekton-controller
       containers:
@@ -29,7 +29,7 @@ spec:
           imagePullPolicy: IfNotPresent
           args:
             - --namespace=jx
-            - --dashboard-url=http://dashboard-jx.192.168.99.102.nip.io
+            - --dashboard-url=http://dashboard-jx.192.168.99.104.nip.io
             - --dashboard-template=namespaces/{{ .Namespace }}/pipelineruns/{{ .PipelineRun }}
           ports:
             - name: metrics

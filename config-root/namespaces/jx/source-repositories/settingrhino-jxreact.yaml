@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: SettingRhino
+    provider: github
+    repository: jxreact
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: settingrhino-jxreact
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/SettingRhino/jxreact.git
+  org: SettingRhino
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jxreact
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/SettingRhino/jxreact

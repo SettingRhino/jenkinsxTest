@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         SettingRhino/jenkinsxTest: true
+        SettingRhino/jxreact: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         SettingRhino/jenkinsxTest: merge
+        SettingRhino/jxreact: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - SettingRhino/jenkinsxTest
+        - SettingRhino/jxreact
       - labels:
         - updatebot
         missingLabels:
@@ -41,7 +44,8 @@ data:
         - needs-rebase
         repos:
         - SettingRhino/jenkinsxTest
-      target_url: http://dashboard-jx.192.168.99.102.nip.io
+        - SettingRhino/jxreact
+      target_url: http://dashboard-jx.192.168.99.104.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
