@@ -30,7 +30,7 @@ jxRequirements:
     gitName: github
     gitServer: https://github.com
     provider: minikube
-    registry: 10.99.94.185
+    registry: 10.99.80.63
   environments:
   - key: dev
     owner: SettingRhino
