@@ -30,7 +30,7 @@ jxRequirements:
     gitName: github
     gitServer: https://github.com
     provider: minikube
-    registry: 10.111.151.173
+    registry: 10.107.120.209
   environments:
   - key: dev
     owner: SettingRhino
@@ -38,7 +38,7 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: 192.168.99.105.nip.io
+    domain: 192.168.99.106.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -jx.
