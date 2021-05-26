@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: SettingRhino
+    provider: github
+    repository: jxgo
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: settingrhino-jxgo
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/SettingRhino/jxgo.git
+  org: SettingRhino
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jxgo
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/SettingRhino/jxgo
